@@ -1,18 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Reminder:</strong>
+  <strong>Your Reminder:</strong><br>
   <%= @reminder.reminder %>
 </p>
 
 <p>
   <strong>Due:</strong>
-  <%= @reminder.due %>
+  <%= @reminder.due.strftime("%x @ %r") %>
 </p>
 
 <p>
-  <strong>Created:</strong>
-  <%= @reminder.created %>
+  <strong>Created at:</strong>
+  <%= @reminder.created_at.strftime("%x @ %r") %>
 </p>
 
 <%= link_to 'Edit', edit_reminder_path(@reminder) %> |

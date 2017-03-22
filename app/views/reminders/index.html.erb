@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Reminders</h1>
+<h1>To-Do List</h1>
 
 <table>
   <thead>
     <tr>
       <th>Reminder</th>
       <th>Due</th>
-      <th>Created</th>
+      <th>Created at</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,11 +16,11 @@
     <% @reminders.each do |reminder| %>
       <tr>
         <td><%= reminder.reminder %></td>
-        <td><%= reminder.due %></td>
-        <td><%= reminder.created %></td>
+        <td><%= reminder.due.strftime("%x @ %r") %></td>
+        <td><%= reminder.created_at.strftime("%x @ %r") %></td>
         <td><%= link_to 'Show', reminder %></td>
         <td><%= link_to 'Edit', edit_reminder_path(reminder) %></td>
-        <td><%= link_to 'Destroy', reminder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Done (Delete)', reminder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -29,3 +29,4 @@
 <br>
 
 <%= link_to 'New Reminder', new_reminder_path %>
+

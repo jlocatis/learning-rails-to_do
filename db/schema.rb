@@ -11,12 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170322150008) do
+ActiveRecord::Schema.define(version: 20170322153919) do
 
   create_table "reminders", force: :cascade do |t|
     t.string   "reminder"
     t.datetime "due"
-    t.datetime "created"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

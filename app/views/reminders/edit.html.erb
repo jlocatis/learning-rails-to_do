@@ -2,5 +2,7 @@
 
 <%= render 'form' %>
 
+<p>Lasted edited at: <%= @reminder.updated_at.strftime("%x @ %r") %></p>
+
 <%= link_to 'Show', @reminder %> |
 <%= link_to 'Back', reminders_path %>
