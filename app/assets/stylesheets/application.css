@@ -1,15 +1,74 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+body {
+  font-family: 'News Cycle', sans-serif;
+}
+
+a {
+  color: black;
+  transition: color 100ms ease;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: lightgray;
+}
+
+.center {
+ text-align: center;
+}
+
+#page-content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#page-title {
+ background-color: black;
+ color: white;
+ position: relative;
+ top: 0;
+}
+
+/* To-Do Reminder Container */
+.reminder_container {
+  margin-bottom: 30px;
+}
+
+.reminder_container p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.reminder_container-top {
+  font-size: 0.75em;
+  font-color: gray;
+}
+
+.reminder_container-bottom {
+  letter-spacing: 0.05em;
+}
+
+.reminder_container-update {
+  font-size: 0.75em;
+}
+
+.due_at {
+  color: red;
+}
+
+.created_at {
+  color: green;
+}
+
+.updated_at {
+  color: orange;
+}
+
+/* Create/Edit Items */
+#reminder_reminder {
+  resize: none;
+  width: 300px;
+  height: 150px;
+}
