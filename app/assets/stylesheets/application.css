@@ -31,6 +31,11 @@ a:hover {
  top: 0;
 }
 
+#page-title a {
+  color: white;
+  text-decoration: none;
+}
+
 /* To-Do Reminder Container */
 .reminder_container {
   margin-bottom: 30px;

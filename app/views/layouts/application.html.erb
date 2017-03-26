@@ -9,12 +9,15 @@
 </head>
 <body>
 <div id="page-content">
-  <h1 class="center" id="page-title">To-Do on Rails</h1>
+  <h1 class="center" id="page-title"><%= link_to 'To-Do on Rails', root_path %></h1>
   <div class="center"><%= link_to 'New Reminder', new_reminder_path %></div>
 
   <%= yield %>
 
 </div>
 
+<div class="center">
+  <%= link_to 'Help', help_path %>
+  <%= link_to 'About', about_path %>
 </body>
 </html>
